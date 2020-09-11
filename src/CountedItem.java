@@ -1,13 +1,13 @@
 public class CountedItem extends PurchaseItem {
-    private final int q;
+    private final int quantity;
 
-    public CountedItem(String n, double up, int q) {
-        super(n, up);
-        this.q = q;
+    public CountedItem(String name, double unitPrice, int quantity) {
+        super(name, unitPrice);
+        this.quantity = quantity;
     }
 
-    public int getQ() {
-        return q;
+    public int getQuantity() {
+        return quantity;
     }
 
     @Override
@@ -22,11 +22,11 @@ public class CountedItem extends PurchaseItem {
 
     @Override
     public double calculate() {
-        return getQ() * getPrice();
+        return getQuantity() * getPrice();
     }
 
     @Override
     public String toString() {
-        return "name : "+getName() + " @ "+"\nunit price : " + getPrice() + "\nquantity : " + q + " units" + "\nprice: " + calculate() + " $";
+        return "name : "+getName() + " @ "+"\nunit price : " + getPrice() + "\nquantity : " + quantity + " units" + "\nprice: " + calculate() + " $";
     }
 }

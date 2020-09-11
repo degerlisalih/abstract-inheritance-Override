@@ -1,13 +1,13 @@
 public class WeighedItem extends PurchaseItem {
-    private final double w;
+    private final double weigh;
 
-    public WeighedItem(String n, double up, double w) {
-        super(n, up);
-        this.w = w;
+    public WeighedItem(String name, double unitPrice, double weigh) {
+        super(name, unitPrice);
+        this.weigh = weigh;
     }
 
-    public double getW() {
-        return w;
+    public double getWeigh() {
+        return weigh;
     }
 
     @Override
@@ -22,11 +22,11 @@ public class WeighedItem extends PurchaseItem {
 
     @Override
     public double calculate() {
-        return getW() * getPrice();
+        return getWeigh() * getPrice();
     }
 
     @Override
     public String toString() {
-        return getName() + " @ "+"\nunit price : " + getPrice() + " \n weight : " + w + " kg" + "\n price : " + calculate() + " $";
+        return getName() + " @ "+"\nunit price : " + getPrice() + " \n weight : " + weigh + " kg" + "\n price : " + calculate() + " $";
     }
 }

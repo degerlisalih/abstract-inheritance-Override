@@ -2,9 +2,9 @@ public abstract class PurchaseItem {
     private final String name;
     private double unitPrice;
 
-    public PurchaseItem(String n, double up) {
-        name = n;
-        setPrice(up);
+    public PurchaseItem(String name, double unitPrice) {
+        this.name = name;
+        setPrice(unitPrice);
     }
     public abstract double calculate();
 
@@ -12,8 +12,8 @@ public abstract class PurchaseItem {
         return name;
     }
 
-    public void setPrice(double up) {
-        unitPrice = (up > 0) ? up : 0;
+    public void setPrice(double unitPrice) {
+        this.unitPrice = (unitPrice > 0) ? unitPrice : 0;
     }
 
     public double getPrice() {

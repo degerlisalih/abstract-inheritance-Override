@@ -6,24 +6,24 @@ class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter name:");
-        String name1 = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Enter unit price:");
-        double up = scanner.nextDouble();
+        double unitPrice = scanner.nextDouble();
         System.out.println("Enter weight:");
-        double w = scanner.nextDouble();
-        WeighedItem item1 = new WeighedItem(name1, up, w);
+        double weigh = scanner.nextDouble();
+        WeighedItem weighedItem = new WeighedItem(name, unitPrice, weigh);
 
         scanner.nextLine();
         System.out.println("Enter name:");
-        String name2 = scanner.nextLine();
+        String name1 = scanner.nextLine();
         System.out.println("Enter unit price:");
-        double up1 = scanner.nextDouble();
+        double unitPrice1 = scanner.nextDouble();
         System.out.println("Enter quantity:");
-        int q = scanner.nextInt();
-        CountedItem item2 = new CountedItem(name2, up1, q);
-        System.out.println(item1);
+        int quantity = scanner.nextInt();
+        CountedItem countedItem = new CountedItem(name1, unitPrice1, quantity);
+        System.out.println(weighedItem);
         System.out.println();
-        System.out.println(item2);
+        System.out.println(countedItem);
         scanner.close();
     }
 }
